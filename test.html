@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form-select {
+        width: 100%;
+        padding: 10px 14px;
+        font-size: 14px;
+        border: 1px solid #dcdfe6;
+        border-radius: 8px;
+        background-color: #fff;
+        appearance: none;
+        background-position: right 10px center;
+        background-size: 16px;
+        transition: border-color 0.2s;
+        outline: none;
+        }
+
+        .form-select:focus {
+        border-color: #165DFF;
+        box-shadow: 0 0 0 2px rgba(22, 93, 255, 0.1);
+        }
+
+        .form-select option {
+        padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <select class="form-select">
+        <option value="">请选择权限</option>
+        <option value="admin">管理员</option>
+        <option value="user">普通用户</option>
+        <option value="guest">访客</option>
+    </select>
+</body>
+</html>

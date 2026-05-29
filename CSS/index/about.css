@@ -1,0 +1,42 @@
+/* 关于区域 - 双栏 */
+.about-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1.2;
+}
+
+.about-stats {
+    flex: 0.8;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background: #fafaff;
+    padding: 2rem;
+    border-radius: 32px;
+}
+
+.stat-item {
+    flex: 1;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1e2f41;
+}
+
+.stat-label {
+    color: #5f6c84;
+}
+
+.about-text p {
+    margin-bottom: 1.2rem;
+    color: #3a3a4a;
+}

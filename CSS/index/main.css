@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* 全局容器 */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+/* 通用 section 样式 */
+section {
+    padding: 100px 0;
+    position: relative;
+}
+
+.section-title {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+.section-sub {
+    color: #5a5a6e;
+    max-width: 650px;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+/* 响应式微调 */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-wrapper {
+        flex-direction: column;
+    }
+    .btn-group {
+        justify-content: center;
+    }
+    .hero-content {
+        text-align: center;
+    }
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .section-header.left-align {
+        text-align: center;
+    }
+    .services-grid, .works-grid {
+        gap: 1.5rem;
+    }
+    section {
+        padding: 70px 0;
+    }
+}
+
+/* 动画滚动 */
+.fade-up {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 查看详情按钮 */
+.detail-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 24px;
+    border: 1px solid #2c3e66;
+    background: #f5f7fc;
+    color: #2c3e66;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.detail-btn:hover {
+    background: #2c3e66;
+    color: #fff;
+}
+
+/* 全局按钮、卡片等额外样式 */
+.card {
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+    padding: 1.5rem;
+    transition: 0.2s;
+}
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 30px -12px rgba(0,0,0,0.08);
+}

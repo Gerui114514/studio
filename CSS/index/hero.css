@@ -1,0 +1,113 @@
+/* Hero 区域 */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 900px;
+    z-index: 2;
+}
+
+.hero-badge {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #4A6FA5;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    display: inline-block;
+}
+
+.hero h1 {
+    font-size: clamp(2.8rem, 8vw, 5.2rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+    color: #121212;
+}
+
+.hero-highlight {
+    background: linear-gradient(120deg, #4A6FA5 0%, #8AA9D6 80%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #3a3a44;
+    max-width: 600px;
+    margin-bottom: 2.4rem;
+    line-height: 1.5;
+}
+
+.btn-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-primary, .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    border-radius: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: #111;
+    color: white;
+    border: 1px solid #111;
+}
+
+.btn-primary:hover {
+    background: #2c3e66;
+    border-color: #2c3e66;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px -12px rgba(0,0,0,0.2);
+}
+
+.btn-outline {
+    border: 1px solid #ccc;
+    color: #1e1e2a;
+    background: transparent;
+}
+
+.btn-outline:hover {
+    border-color: #111;
+    background: #f8f8fc;
+    transform: translateY(-3px);
+}
+/* 抽象装饰圆 */
+.hero-deco {
+    position: absolute;
+    right: -10%;
+    top: 20%;
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(74,111,165,0.08) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-deco2 {
+    left: -5%;
+    bottom: 0;
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(138,169,214,0.05) 0%, rgba(255,255,255,0) 70%);
+    position: absolute;
+    border-radius: 50%;
+}

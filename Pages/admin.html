@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理后台 - 智软工作室</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/index/nav.css">
+    <link rel="stylesheet" href="../CSS/index/main.css">
+    <link rel="stylesheet" href="../CSS/admin/admin.css">
+    <link rel="stylesheet" href="../CSS/admin/modal.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">智软<span>·工作室</span></a></div>
+            <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+            <div class="nav-links" id="nav-links">
+                <a href="../index.html#home">首页</a>
+                <a href="../index.html#services">服务</a>
+                <a href="../index.html#works">作品</a>
+                <a href="../index.html#about">关于</a>
+                <a href="../index.html#contact">联系</a>
+                <div id="auth-area"></div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="admin-container">
+        <div class="container">
+            <div class="admin-header">
+                <h1><i class="fas fa-tachometer-alt"></i> 管理后台</h1>
+                <p>欢迎，<span id="adminName"></span> | 角色：管理员</p>
+            </div>
+
+            <div class="admin-stats">
+                <div class="stat-card"><i class="fas fa-users"></i><span>128</span><label>注册用户</label></div>
+                <div class="stat-card"><i class="fas fa-project-diagram"></i><span>24</span><label>进行中项目</label></div>
+                <div class="stat-card"><i class="fas fa-comment-dots"></i><span>42</span><label>待处理留言</label></div>
+            </div>
+
+            <div class="admin-tabs">
+                <button class="tab-btn active" data-tab="users">用户管理</button>
+                <button class="tab-btn" data-tab="services">服务管理</button>
+                <button class="tab-btn" data-tab="projects">项目管理</button>
+            </div>
+
+            <!-- 用户管理面板 -->
+            <div id="usersPanel" class="admin-panel active">
+                <div class="panel-header">
+                    <h3>用户列表</h3>
+                    <button id="addUserBtn" class="btn-sm"><i class="fas fa-plus"></i> 新增用户</button>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr><th>ID</th><th>用户名</th><th>邮箱</th><th>权限</th><th>姓名</th><th>加入时间</th><th>出生时间</th><th>区域</th><th>岗位</th><th>操作</th></tr>
+                    </thead>
+                    <tbody id="userTableBody">
+                        <!-- 动态加载 -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 服务管理面板 -->
+            <div id="servicesPanel" class="admin-panel">
+                <div class="panel-header">
+                    <h3>服务列表</h3>
+                    <button id="addServiceBtn" class="btn-sm"><i class="fas fa-plus"></i> 新增服务</button>
+                </div>
+                <table class="data-table">
+                    <thead><tr><th>ID</th><th>标题</th><th>描述</th><th>操作</th></tr></thead>
+                    <tbody id="serviceTableBody"></tbody>
+                </table>
+            </div>
+
+            <!-- 项目管理面板 -->
+            <div id="projectsPanel" class="admin-panel">
+                <div class="panel-header">
+                    <h3>项目列表</h3>
+                    <button id="addProjectBtn" class="btn-sm"><i class="fas fa-plus"></i> 新增项目</button>
+                </div>
+                <table class="data-table">
+                    <thead><tr><th>ID</th><th>标题</th><th>描述</th><th>操作</th></tr></thead>
+                    <tbody id="projectTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 智软工作室 | 管理后台</p>
+        </div>
+    </footer>
+
+    
+    <div id="UserModal" class="modal">
+        <div class="form-container">
+            <span class="close-modal">&times;</span>
+            <h2 id="UserForm-title">用户</h2>
+            <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理后台 - 智软工作室</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/index/nav.css">
+    <link rel="stylesheet" href="../CSS/index/main.css">
+    <link rel="stylesheet" href="../CSS/admin/admin.css">
+    <link rel="stylesheet" href="../CSS/admin/modal.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">智软<span>·工作室</span></a></div>
+            <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+            <div class="nav-links" id="nav-links">
+                <a href="../index.html#home">首页</a>
+                <a href="../index.html#services">服务</a>
+                <a href="../index.html#works">作品</a>
+                <a href="../index.html#about">关于</a>
+                <a href="../index.html#contact">联系</a>
+                <div id="auth-area"></div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="admin-container">
+        <div class="container">
+            <div class="admin-header">
+                <h1><i class="fas fa-tachometer-alt"></i> 管理后台</h1>
+                <p>欢迎，<span id="adminName"></span> | 角色：管理员</p>
+            </div>
+
+            <div class="admin-stats">
+                <div class="stat-card"><i class="fas fa-users"></i><span>128</span><label>注册用户</label></div>
+                <div class="stat-card"><i class="fas fa-project-diagram"></i><span>24</span><label>进行中项目</label></div>
+                <div class="stat-card"><i class="fas fa-comment-dots"></i><span>42</span><label>待处理留言</label></div>
+            </div>
+
+            <div class="admin-tabs">
+                <button class="tab-btn active" data-tab="users">用户管理</button>
+                <button class="tab-btn" data-tab="services">服务管理</button>
+                <button class="tab-btn" data-tab="projects">项目管理</button>
+            </div>
+
+            <!-- 用户管理面板 -->
+            <div id="usersPanel" class="admin-panel active">
+                <div class="panel-header">
+                    <h3>用户列表</h3>
+                    <button id="addUserBtn" class="btn-sm"><i class="fas fa-plus"></i> 新增用户</button>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr><th>ID</th><th>用户名</th><th>邮箱</th><th>权限</th><th>姓名</th><th>加入时间</th><th>出生时间</th><th>区域</th><th>岗位</th><th>操作</th></tr>
+                    </thead>
+                    <tbody id="userTableBody"></tbody>
+                </table>
+            </div>
+
+            <!-- 服务管理面板 -->
+            <div id="servicesPanel" class="admin-panel">
+                <div class="panel-header">
+                    <h3>服务列表</h3>
+                    <button id="addServiceBtn" class="btn-sm"><i class="fas fa-plus"></i> 新增服务</button>
+                </div>
+                <table class="data-table">
+                    <thead><tr><th>ID</th><th>标题</th><th>描述</th><th>操作</th></tr></thead>
+                    <tbody id="serviceTableBody"></tbody>
+                </table>
+            </div>
+
+            <!-- 项目管理面板 -->
+            <div id="projectsPanel" class="admin-panel">
+                <div class="panel-header">
+                    <h3>项目列表</h3>
+                    <button id="addProjectBtn" class="btn-sm"><i class="fas fa-plus"></i> 新增项目</button>
+                </div>
+                <table class="data-table">
+                    <thead><tr><th>ID</th><th>标题</th><th>描述</th><th>操作</th></tr></thead>
+                    <tbody id="projectTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 智软工作室 | 管理后台</p>
+        </div>
+    </footer>
+
+    <!-- 用户模态框（新增/编辑共用） -->
+    <div id="UserModal" class="modal">
+        <div class="form-container">
+            <span class="close-modal">&times;</span>
+            <h2 id="UserForm-title">用户</h2>
+            <div class="input-group">
+                <label for="userid">用户ID：</label>
+                <input type="text" id="userid" name="userid" required>
+            </div>
+            <div class="input-group">
+                <label for="username">用户名:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="email">邮箱:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="power">权限:</label>
+                <select id="power" name="power" required>
+                    <option value="user">普通用户</option>
+                    <option value="member">成员</option>
+                    <option value="admin">管理员</option>
+            </select>
+            </div>
+            <div class="input-group">
+                <label for="name">姓名:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input-group">
+                <label for="joinDate">加入时间:</label>
+                <input type="date" id="joinDate" name="joinDate" required>
+            </div>
+            <div class="input-group">
+                <label for="birthTime">出生时间:</label>
+                <input type="date" id="birthTime" name="birthTime" required>
+            </div>
+            <div class="input-group">
+                <label for="region">区域:</label>
+                <input type="text" id="region" name="region" required>
+            </div>
+            <div class="input-group">
+                <label for="job">岗位:</label>
+                <input type="text" id="job" name="job" required>
+            </div>
+            <div class="input-group">
+                <label for="password">密码:</label>
+                <input type="text" id="password" name="password" required>
+            </div>
+            <p class="auth-hint"></p>
+            <button type="submit" id="UserBtn" class="btn-sm">用户</button>
+        </div>
+    </div>
+
+
+    <script src="../Script/axios.min.js"></script>
+    <script src="../Script/index.js"></script>
+    <script src="../Script/admin/admin.js"></script>
+</body>
+</html>

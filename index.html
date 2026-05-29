@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>智软工作室 | 创新·极简·卓越</title>
+    <!-- Google Fonts & Font Awesome -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./CSS/index/about.css">
+    <link rel="stylesheet" href="./CSS/index/contact.css">
+    <link rel="stylesheet" href="./CSS/index/footer.css">
+    <link rel="stylesheet" href="./CSS/index/hero.css">
+    <link rel="stylesheet" href="./CSS/index/services.css">
+    <link rel="stylesheet" href="./CSS/index/project.css">
+    <link rel="stylesheet" href="./CSS/index/nav.css">
+    <link rel="stylesheet" href="./CSS/index/modal.css">
+    <link rel="stylesheet" href="./CSS/index/main.css">
+</head>
+<body>
+
+<!-- 头部（导航栏）静态 -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <div class="logo">智软<span>·工作室</span></div>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links" id="nav-links">
+            <a href="#home">首页</a>
+            <a href="#services">服务</a>
+            <a href="#works">作品</a>
+            <a href="#about">关于</a>
+            <a href="#contact">联系</a>
+            <!-- 登录/用户区域动态插入 -->
+            <div id="auth-area"></div>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <!-- Hero 区域（动态内容容器） -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content" id="hero-content">
+                <div class="hero-badge">✦ 前沿软件工坊</div>
+                <h1>构建<span class="hero-highlight">非凡体验</span><br>驱动数字革新</h1>
+                <p>专注于定制化软件开发、AI 解决方案与全栈产品设计。我们用代码与创意，打造面向未来的软件生态系统。</p>
+                <div class="btn-group">
+                <a href="#contact" class="btn-primary">开始协作 <i class="fas fa-arrow-right"></i></a>
+                <a href="#works" class="btn-outline">开始协作 <i class="fas fa-eye"></i></a>
+        </div>
+            </div>
+        </div>
+        <div class="hero-deco"></div>
+        <div class="hero-deco2"></div>
+    </section>
+
+    <!-- 服务区域（动态容器） -->
+    <section id="services">
+        <div class="container">
+            <div class="section-header" id="services-header">
+                <h2 class="section-title">核心服务</h2>
+                <p class="section-sub">从战略咨询到落地部署，提供端到端的软件工程能力，助力企业数字化重塑。</p>
+            </div>
+            <div class="services-grid" id="services-grid"></div>
+        </div>
+    </section>
+
+    <!-- 作品集区域（动态容器） -->
+    <section id="works" style="background: #FCFCFD;">
+        <div class="container">
+            <div class="section-header" id="works-header">
+                <h2 class="section-title">精选项目</h2>
+                <p class="section-sub">近年我们与创新团队共同打造的数字产品，涵盖多行业领先解决方案。</p>
+            </div>
+            <div class="works-grid" id="works-grid"></div>
+        </div>
+    </section>
+
+    <!-- 关于区域（静态） -->
+    <section id="about">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-text fade-up">
+                    <h2 class="section-title">关于智软</h2>
+                    <p>智软工作室由一群充满热情的工程师、设计师与创新者组成，致力于通过优雅的代码与深刻的设计思维，为客户提供卓越的软件产品。我们坚信技术应当服务于人，每个解决方案都融合艺术感知与工程严谨。</p>
+                    <p>成立五年以来，已帮助 80+ 初创公司与世界 500 强企业完成数字化转型，交付项目覆盖金融、医疗、零售与前沿科技领域。我们秉持透明协作、敏捷迭代与长期主义。</p>
+                    <p>设计哲学受 Tenlon Studio 与 Shiyun Studio 启发 —— 极简之下，蕴藏丰富细节，让产品回归本质价值。</p>
+                </div>
+                <div class="about-stats fade-up">
+                    <div class="stat-item">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">年专业沉淀</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">120+</div>
+                        <div class="stat-label">成功项目</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">客户留存率</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系区域（静态） -->
+    <section id="contact" style="background: #ffffff;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">开启对话</h2>
+                <p class="section-sub">无论您有一个初步想法或完整方案，我们都乐于倾听，共同雕琢下一个数字杰作。</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info fade-up">
+                    <h3>联系方式</h3>
+                    <div class="contact-details">
+                        <div class="detail"><i class="fas fa-envelope"></i> <span>hello@prismasoft.com</span></div>
+                        <div class="detail"><i class="fas fa-phone-alt"></i> <span>+86 (010) 2345 6789</span></div>
+                        <div class="detail"><i class="fas fa-map-marker-alt"></i> <span>北京市朝阳区·数码大厦A座</span></div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form fade-up">
+                    <h3>留下信息</h3>
+                        <input type="text" id="contact-name" placeholder="您的姓名" required>
+                        <input type="email" id="contact-email" placeholder="电子邮箱" required>
+                        <textarea rows="3" id="contact-desc" placeholder="简单描述您的需求..."></textarea>
+                        <button type="submit" id="contact-btn">发送咨询 <i class="fas fa-paper-plane"></i></button>
+                    <p class="form-note">我们将在24小时内回复您，所有信息保密。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- 页脚（静态） -->
+<footer>
+    <div class="container">
+        <p>© 2025 智软工作室 | 匠心代码 · 极简美学</p>
+        <div class="inspire">设计灵感源自 Tenlon Studio 与 Shiyun Studio 的现代极简主义风格</div>
+    </div>
+</footer>
+
+<!-- 登录/注册模态框 -->
+<div id="authModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-tabs">
+            <button class="tab-btn active" data-tab="login">登录</button>
+            <button class="tab-btn" data-tab="register">注册</button>
+        </div>
+        <!-- 登录表单 -->
+        <form id="loginForm" class="auth-form active">
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" id="loginUsernameOrEmail" placeholder="用户名 / 邮箱" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="loginPassword" placeholder="密码" required>
+            </div>
+            <button type="submit" class="auth-submit">登录</button>
+            <p class="auth-error" id="loginError"></p>
+        </form>
+        <!-- 注册表单 -->
+        <form id="registerForm" class="auth-form">
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" id="regUsername" placeholder="用户名 (4-20位)" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="regEmail" placeholder="邮箱" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="regPassword" placeholder="密码 (至少6位)" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-check-circle"></i>
+                <input type="password" id="regConfirmPassword" placeholder="确认密码" required>
+            </div>
+            <button type="submit" class="auth-submit">注册新账号</button>
+            <p class="auth-error" id="registerError"></p>
+        </form>
+    </div>
+</div>
+
+    <script src="./Script/axios.min.js"></script>
+    <script src="./Script/index.js"></script>
+</body>
+</html>

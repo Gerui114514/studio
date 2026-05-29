@@ -1,0 +1,86 @@
+/* 联系区域 */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.contact-info h3, .contact-form h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.contact-details {
+    margin: 2rem 0;
+}
+
+.contact-details .detail {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.4rem;
+}
+
+.detail i {
+    width: 32px;
+    font-size: 1.3rem;
+    color: #4A6FA5;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    background: #f0f2f8;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #2c3e66;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    background: #2c3e66;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 14px 18px;
+    margin-bottom: 1rem;
+    border: 1px solid #e2e2ec;
+    border-radius: 24px;
+    font-family: inherit;
+    background: #fff;
+    transition: 0.2s;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: #4A6FA5;
+    box-shadow: 0 0 0 3px rgba(74,111,165,0.1);
+}
+
+.contact-form button {
+    background: #111;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 32px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.contact-form button:hover {
+    background: #2c3e66;
+}
